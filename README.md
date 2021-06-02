@@ -16,7 +16,7 @@ fractol builds with gcc.
 
 To launch the program type:
 ```bash
-./fdf Map/france.xxl
+./fdf Map/france.l
 ```
 ## Note
 25/20
