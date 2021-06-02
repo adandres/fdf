@@ -10,7 +10,7 @@ To clone and compile the project, run:
 ```bash
  git clone https://github.com/adandres/fdf.git fdf && cd fdf && make
 ```
-fractol builds with gcc.
+fdf builds with gcc.
 
 ## Usage
 
