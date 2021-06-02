@@ -23,8 +23,8 @@ Key|Action|
 :-:|:-:
 <kbd>c</kbd>|Select height coloration (recommended)
 <kbd>m</kbd>|Select in depth height coloration (recommended)
-<kbd>^</kbd><kbd>v</kbd>|Zomm
-<kbd>z</kbd><br><kbd>q</kbd><kbd>s</kbd><kbd>d</kbd>|Move the map (X, Y)
+<kbd>^</kbd><kbd>v</kbd>|Zoom
+<kbd>z</kbd><br><kbd>q</kbd><kbd>s</kbd><kbd>d</kbd>|Move
 <kbd>Shift</kbd>| Rotate map to bird's eye view
 <kbd>Space</kbd>| Rotate map to initial view
 <kbd>ù</kbd>| Select mouse rotation
