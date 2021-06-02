@@ -37,3 +37,5 @@ Key|Action|
 
 ## Note
 25/20
+
+![exemple](/images/exemple.jpg)
