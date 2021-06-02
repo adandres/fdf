@@ -1,21 +1,20 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile2                                          :+:      :+:    :+:    #
+#    Makefile                                        /       \.'`  `',.--//    #
 #                                                     +:+ +:+         +:+      #
 #    By: adandres <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/27 02:42:08 by adandres          #+#    #+#              #
-#    Updated: 2018/09/08 14:47:43 by adandres         ###   ########.fr        #
+#    Updated: 2021/06/02 14:30:44 by adandres                                  #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = fdf
-INCLUDES = -I /usr/local/include
-LIBS = libft/libft.a -L /usr/X11/lib/ -lmlx -framework OpenGL \
-	   -framework AppKit
+INCLUDES = -I minilibx_macos
+LIBS = libft/libft.a -framework OpenGL -framework AppKit
 SRC = src
 SRC_FILES = $(wildcard $(SRC)/*.c)
 OBJ_DIR = obj
@@ -25,19 +24,21 @@ all : $(NAME)
 
 
 $(NAME) : $(OBJ_FILES)
-	cd libft && make
-	$(CC) -o $(NAME) $(OBJ_FILES) $(LIBS)
+	@make -C libft
+	@make -C minilibx_macos
+	$(CC) -o $(NAME) $(OBJ_FILES) $(LIBS) minilibx_macos/libmlx.a
 
 $(OBJ_DIR)/%.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 
 clean :
 	rm -f $(OBJ_FILES)
-	cd libft && make clean
+	@make -C libft clean
+	@make -C minilibx_macos clean
 
 fclean : clean
 	rm -f $(NAME)
-	cd libft && make fclean
+	@make -C libft clean
+	@make -C minilibx_macos clean
 
 re : fclean all
-	cd libft && make re	
