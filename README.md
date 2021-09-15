@@ -1,6 +1,6 @@
 ## fdf
 
-"fdf" is a simple 3D Wireframe Viewer.
+"fdf" is a simple Wireframe Viewer, i implemented [rotation matrices](https://en.wikipedia.org/wiki/Rotation_matrix) so you can move the maps in 3d.
 You can see the [subject](https://github.com/adandres/fdf/blob/main/fdf.pdf) here.
 Works only on Mac OsX
 
